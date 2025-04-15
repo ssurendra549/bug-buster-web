@@ -19,11 +19,16 @@ const HomePage = () => {
         {/* Hero Section */}
         <section className="py-16 px-6 md:py-24 md:px-12 lg:px-20 bg-blue-50">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
-                We help your product take off — with confidence
-              </h1>
-              <p className="text-lg mb-8 text-gray-700">
+            <div className="animate-fade-in space-y-6">
+              <div className="space-y-2">
+                <p className="text-lg font-medium text-blue-600">
+                  We help your product take off — with confidence
+                </p>
+                <h1 className="text-3xl md:text-4xl font-bold text-blue-900">
+                  Expert QA Services for Software Excellence
+                </h1>
+              </div>
+              <p className="text-lg text-gray-700">
                 Elevate your software quality with expert QA services that ensure 
                 your products soar above the competition.
               </p>
