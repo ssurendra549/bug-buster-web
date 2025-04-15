@@ -20,17 +20,9 @@ const HomePage = () => {
         <section className="py-16 px-6 md:py-24 md:px-12 lg:px-20 bg-blue-50">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <div className="flex items-center mb-6">
-                <img 
-                  src="/lovable-uploads/d768b310-b4e1-41d5-85c2-f0aad9b22c99.png" 
-                  alt="FlyHigh Technologies Logo" 
-                  className="h-16 w-16 mr-4"
-                />
-                <h1 className="text-3xl md:text-4xl font-bold text-blue-900">FlyHigh Technologies</h1>
-              </div>
-              <h2 className="text-xl md:text-2xl mb-6 text-blue-700">
+              <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
                 We help your product take off — with confidence
-              </h2>
+              </h1>
               <p className="text-lg mb-8 text-gray-700">
                 Elevate your software quality with expert QA services that ensure 
                 your products soar above the competition.

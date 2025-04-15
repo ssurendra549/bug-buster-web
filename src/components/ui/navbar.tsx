@@ -15,8 +15,13 @@ export function Navbar() {
   return (
     <nav className="py-4 px-6 md:px-12 lg:px-20 sticky top-0 bg-white shadow-sm z-50">
       <div className="flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold">
-          BugSquashers
+        <Link to="/" className="flex items-center space-x-3">
+          <img 
+            src="/lovable-uploads/d768b310-b4e1-41d5-85c2-f0aad9b22c99.png" 
+            alt="FlyHigh Technologies Logo" 
+            className="h-10 w-10"
+          />
+          <span className="text-2xl font-bold">FlyHigh Technologies</span>
         </Link>
 
         {/* Desktop Navigation */}
