@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -14,13 +15,18 @@ export function Navbar() {
   return (
     <nav className="py-4 px-6 md:px-12 lg:px-20 sticky top-0 bg-white shadow-sm z-50">
       <div className="flex items-center justify-between">
-        <Link to="/" className="flex items-center">
-          <img 
-            src="/lovable-uploads/d768b310-b4e1-41d5-85c2-f0aad9b22c99.png" 
-            alt="FlyHigh Technologies Logo" 
-            className="h-16 w-16"
-          />
-        </Link>
+        <div className="flex items-center space-x-4">
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/d768b310-b4e1-41d5-85c2-f0aad9b22c99.png" 
+              alt="FlyHigh Technologies Logo" 
+              className="h-16 w-16"
+            />
+          </Link>
+          <p className="text-lg font-medium text-blue-600 hidden md:block">
+            We help your product take off — with confidence
+          </p>
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
