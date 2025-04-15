@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Check, Zap, Database, Monitor, Smartphone, Server } from 'lucide-react';
 import { BugIllustration } from '@/components/bug-illustration';
@@ -18,25 +17,30 @@ const HomePage = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-16 px-6 md:py-24 md:px-12 lg:px-20">
+        <section className="py-16 px-6 md:py-24 md:px-12 lg:px-20 bg-blue-50">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Squashing Bugs<br />Since Day One.
-              </h1>
-              <h2 className="text-xl md:text-2xl mb-6 text-gray-600">
-                Test smart. Release fearless.
+              <div className="flex items-center mb-6">
+                <img 
+                  src="/lovable-uploads/d768b310-b4e1-41d5-85c2-f0aad9b22c99.png" 
+                  alt="FlyHigh Technologies Logo" 
+                  className="h-16 w-16 mr-4"
+                />
+                <h1 className="text-3xl md:text-4xl font-bold text-blue-900">FlyHigh Technologies</h1>
+              </div>
+              <h2 className="text-xl md:text-2xl mb-6 text-blue-700">
+                We help your product take off — with confidence
               </h2>
               <p className="text-lg mb-8 text-gray-700">
-                Tired of bugs ruining your product releases?<br />
-                Talk to us—we're the QA experts who make sure bugs don't even get a chance to live.
+                Elevate your software quality with expert QA services that ensure 
+                your products soar above the competition.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <PrimaryCta asChild>
-                  <Link to="/contact">Talk to Our QA Squad</Link>
+                  <Link to="/contact">Get Started</Link>
                 </PrimaryCta>
                 <SecondaryCta asChild>
-                  <Link to="/contact">Get a Free Bug Audit</Link>
+                  <Link to="/services">Our Services</Link>
                 </SecondaryCta>
               </div>
             </div>
@@ -47,11 +51,11 @@ const HomePage = () => {
           
           <div className="max-w-6xl mx-auto mt-16">
             <AnimatedBugBanner />
-            <p className="text-center text-lg font-medium mt-4">
-              "We test. You grow."
+            <p className="text-center text-lg font-medium mt-4 text-blue-800">
+              "Quality that propels your success."
             </p>
             <p className="text-center text-gray-600">
-              Because quality software is good business.
+              Precision testing for products that fly high.
             </p>
           </div>
         </section>
