@@ -344,7 +344,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run tests
-        run: npm run test -- --shard=${{ matrix.shard }}/${{ strategy.job-total }}
+        run: npm run test -- --shard=\$\{\{ matrix.shard \}\}/\$\{\{ strategy.job-total \}\}
       </code></pre>
       
       <h3>Step 4: Set Up Comprehensive Reporting</h3>
