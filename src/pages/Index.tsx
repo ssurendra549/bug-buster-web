@@ -20,7 +20,7 @@ const HomePage = () => {
         <section className="py-16 px-6 md:py-24 md:px-12 lg:px-20 bg-blue-50">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="animate-fade-in space-y-6">
-              <h1 className="text-3xl md:text-4xl font-bold text-blue-900">
+              <h1 className="text-4xl md:text-5xl font-bold text-blue-900">
                 Expert QA Services for Software Excellence
               </h1>
               <p className="text-lg text-gray-700">
@@ -36,19 +36,9 @@ const HomePage = () => {
                 </SecondaryCta>
               </div>
             </div>
-            <div className="lg:pl-10 animate-scale-in w-full max-w-md mx-auto lg:max-w-none">
+            <div className="lg:pl-10 animate-scale-in w-full max-w-md mx-auto lg:max-w-none flex justify-center items-center">
               <BugIllustration />
             </div>
-          </div>
-          
-          <div className="max-w-6xl mx-auto mt-16">
-            <AnimatedBugBanner />
-            <p className="text-center text-lg font-medium mt-4 text-blue-800">
-              "Quality that propels your success."
-            </p>
-            <p className="text-center text-gray-600">
-              Precision testing for products that fly high.
-            </p>
           </div>
         </section>
         
