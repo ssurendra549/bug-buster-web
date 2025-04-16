@@ -20,12 +20,18 @@ const HomePage = () => {
         <section className="py-12 px-6 md:py-16 md:px-12 lg:px-20 bg-blue-50">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="md:w-1/2 space-y-4">
-              <h1 className="text-2xl md:text-3xl font-bold text-blue-900">
-                Expert QA Services for<br />Software Excellence
+    
+              <h2 className="text-2xl md:text-2xl font-bold text-blue-900">
+              Tired of bugs ruining your product releases?
+              </h2>
+              <p className="text-sm md:text-base text-gray-700">
+              We're the QA experts who make sure bugs don't even get a chance to live.
+              </p>
+              <h1 className="text-2xl md:text-2xl font-bold text-blue-900">
+              Squashing Bugs Since Day One.
               </h1>
               <p className="text-sm md:text-base text-gray-700">
-                Elevate your software quality with expert QA services<br />
-                that ensure your products soar above the competition.
+              Test smart. Release fearless.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <PrimaryCta 
