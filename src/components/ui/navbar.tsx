@@ -15,17 +15,14 @@ export function Navbar() {
   return (
     <nav className="py-4 px-6 md:px-12 lg:px-20 sticky top-0 bg-white shadow-sm z-50">
       <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/d768b310-b4e1-41d5-85c2-f0aad9b22c99.png" 
-              alt="FlyHigh Technologies Logo" 
-              className="h-16 w-16"
+              src="/lovable-uploads/7d3653a2-7874-4ff0-ab7a-47bc572c255e.png" 
+              alt="FLY HIGH TECHNOLOGIES Logo" 
+              className="h-12 md:h-16"
             />
           </Link>
-          <p className="text-lg font-medium text-blue-600 hidden md:block">
-            We help your product take off — with confidence
-          </p>
         </div>
 
         {/* Desktop Navigation */}
