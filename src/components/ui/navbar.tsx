@@ -20,7 +20,7 @@ export function Navbar() {
             <img 
               src="/lovable-uploads/7d3653a2-7874-4ff0-ab7a-47bc572c255e.png" 
               alt="FLY HIGH TECHNOLOGIES Logo" 
-              className="h-16 md:h-20"
+              className="h-20 md:h-24"
             />
           </Link>
         </div>

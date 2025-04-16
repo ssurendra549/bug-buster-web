@@ -11,7 +11,7 @@ export function BugIllustration() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-[400px] h-full">
+    <div className="relative w-full max-w-[300px] h-full">
       <svg 
         ref={svgRef}
         viewBox="0 0 400 300" 
