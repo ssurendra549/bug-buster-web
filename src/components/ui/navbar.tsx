@@ -18,9 +18,9 @@ export function Navbar() {
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/7d3653a2-7874-4ff0-ab7a-47bc572c255e.png" 
+              src="/lovable-uploads/logo.png" 
               alt="FLY HIGH TECHNOLOGIES Logo" 
-              className="h-20 md:h-24"
+              className="h-40 md:h-60"
             />
           </Link>
         </div>
