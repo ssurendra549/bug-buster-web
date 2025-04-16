@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Check, Zap, Database, Monitor, Smartphone, Server } from 'lucide-react';
 import { BugIllustration } from '@/components/bug-illustration';
@@ -16,25 +17,32 @@ const HomePage = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-16 px-6 md:py-24 md:px-12 lg:px-20 bg-blue-50">
-          <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
-            <div className="lg:flex-1 space-y-5">
-              <h1 className="text-3xl md:text-4xl font-bold text-blue-900">
-                Expert QA Services for Software Excellence
+        <section className="py-12 px-6 md:py-16 md:px-12 lg:px-20 bg-blue-50">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="md:w-1/2 space-y-4">
+              <h1 className="text-2xl md:text-3xl font-bold text-blue-900">
+                Expert QA Services for<br />Software Excellence
               </h1>
-              <p className="text-base md:text-lg text-gray-700">
-                Elevate your software quality with expert QA services that ensure your products soar above the competition.
+              <p className="text-sm md:text-base text-gray-700">
+                Elevate your software quality with expert QA services<br />
+                that ensure your products soar above the competition.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <PrimaryCta asChild className="bg-black hover:bg-gray-800 text-white">
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                <PrimaryCta 
+                  asChild 
+                  className="bg-black hover:bg-gray-800 text-white text-sm py-3 px-4 h-auto"
+                >
                   <Link to="/contact">Talk to Our QA Squad</Link>
                 </PrimaryCta>
-                <SecondaryCta asChild className="border-black text-black hover:bg-gray-100">
+                <SecondaryCta 
+                  asChild 
+                  className="border-black text-black hover:bg-gray-100 text-sm py-3 px-4 h-auto"
+                >
                   <Link to="/services">Get a Free Bug Audit</Link>
                 </SecondaryCta>
               </div>
             </div>
-            <div className="lg:flex-1 flex justify-center items-center">
+            <div className="md:w-1/2 flex justify-center items-center">
               <BugIllustration />
             </div>
           </div>
