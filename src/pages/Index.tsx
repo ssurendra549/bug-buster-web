@@ -1,7 +1,7 @@
+
 import { Link } from 'react-router-dom';
 import { Check, Zap, Database, Monitor, Smartphone, Server } from 'lucide-react';
 import { BugIllustration } from '@/components/bug-illustration';
-import { AnimatedBugBanner } from '@/components/animated-bug-banner';
 import { Navbar } from '@/components/ui/navbar';
 import { Footer } from '@/components/ui/footer';
 import { SectionTitle } from '@/components/ui/section-title';
@@ -18,25 +18,25 @@ const HomePage = () => {
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="py-16 px-6 md:py-24 md:px-12 lg:px-20 bg-blue-50">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="animate-fade-in space-y-6">
+          <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row gap-8 items-center">
+            <div className="lg:flex-1 space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold text-blue-900">
-                Expert QA Services for Software Excellence
+                Squashing Bugs Since Day One.
               </h1>
               <p className="text-lg text-gray-700">
-                Elevate your software quality with expert QA services that ensure 
-                your products soar above the competition.
+                Tired of bugs ruining your product releases? Talk to us--we're the QA experts who make sure 
+                bugs don't even get a chance to live.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <PrimaryCta asChild>
-                  <Link to="/contact">Get Started</Link>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <PrimaryCta asChild className="bg-black hover:bg-gray-800 text-white">
+                  <Link to="/contact">Talk to Our QA Squad</Link>
                 </PrimaryCta>
-                <SecondaryCta asChild>
-                  <Link to="/services">Our Services</Link>
+                <SecondaryCta asChild className="border-black text-black hover:bg-gray-100">
+                  <Link to="/services">Get a Free Bug Audit</Link>
                 </SecondaryCta>
               </div>
             </div>
-            <div className="lg:pl-10 animate-scale-in w-full max-w-md mx-auto lg:max-w-none flex justify-center items-center">
+            <div className="lg:flex-1 flex justify-center items-center">
               <BugIllustration />
             </div>
           </div>
