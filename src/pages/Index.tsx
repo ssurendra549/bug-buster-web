@@ -43,8 +43,15 @@ const HomePage = () => {
                 Tired of bugs ruining your product releases?
               </h2>
               
-              {/* Carousel for punch lines */}
-              <div className="h-24">
+              <p className="text-sm md:text-base text-gray-700">
+                We're the QA experts who make sure bugs don't even get a chance to live.
+              </p>
+              <p className="text-sm md:text-base text-gray-700">
+                Test smart. Release fearless.
+              </p>
+              
+              {/* Carousel for punch lines - moved below the text */}
+              <div className="h-20 mt-2">
                 <Carousel
                   opts={{
                     align: "start",
@@ -58,34 +65,28 @@ const HomePage = () => {
                     {HeroPunchlines.map((line, index) => (
                       <CarouselItem key={index} className="pl-0">
                         <div className="p-1">
-                          <h2 className="text-xl md:text-2xl font-bold text-blue-900">{line}</h2>
+                          <h2 className="text-lg md:text-xl font-bold text-blue-900">{line}</h2>
                         </div>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <div className="flex justify-start gap-2 mt-4">
+                  <div className="flex justify-start gap-2 mt-2">
                     <CarouselPrevious 
-                      className="static transform-none translate-y-0 translate-x-0 h-7 w-7" 
+                      className="static transform-none translate-y-0 translate-x-0 h-6 w-6" 
                       variant="outline"
                     >
-                      <ChevronLeft className="h-4 w-4" />
+                      <ChevronLeft className="h-3 w-3" />
                     </CarouselPrevious>
                     <CarouselNext 
-                      className="static transform-none translate-y-0 translate-x-0 h-7 w-7"
+                      className="static transform-none translate-y-0 translate-x-0 h-6 w-6"
                       variant="outline"
                     >
-                      <ChevronRight className="h-4 w-4" />
+                      <ChevronRight className="h-3 w-3" />
                     </CarouselNext>
                   </div>
                 </Carousel>
               </div>
               
-              <p className="text-sm md:text-base text-gray-700">
-                We're the QA experts who make sure bugs don't even get a chance to live.
-              </p>
-              <p className="text-sm md:text-base text-gray-700">
-                Test smart. Release fearless.
-              </p>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <PrimaryCta 
                   asChild 
