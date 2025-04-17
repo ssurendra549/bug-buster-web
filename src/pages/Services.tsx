@@ -4,7 +4,8 @@ import { Footer } from '@/components/ui/footer';
 import { SectionTitle } from '@/components/ui/section-title';
 import { PrimaryCta } from '@/components/ui/cta-button';
 import { Link } from 'react-router-dom';
-import { Zap, Server, Smartphone, Check, Database, Monitor } from 'lucide-react';
+import { Zap, Server, Smartphone, Check, Database, Monitor, Box, BarChart3, Layers, GitCompare } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const ServicesPage = () => {
   return (
@@ -34,54 +35,77 @@ const ServicesPage = () => {
               align="center"
             />
             
-            {/* Automation Testing */}
-            <div className="mb-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-              <div className="lg:col-span-1">
-                <div className="bg-blue-50 p-8 rounded-lg">
-                  <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <Zap className="h-6 w-6 text-blue-600" />
+            <Card className="mb-16">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold mb-6">Automation Testing</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Zap className="h-5 w-5 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Automation Testing</h3>
-                  <p className="text-gray-700">
-                    Accelerate releases and reduce manual effort with robust, maintainable test automation.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-2 space-y-4">
-                <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <h4 className="font-bold mb-2">Frameworks & Tools</h4>
-                  <p className="text-gray-600">
-                    We're experts in Selenium, Cypress, Playwright, WebdriverIO and can build frameworks 
-                    from scratch or optimize your existing solutions.
-                  </p>
+                  <div>
+                    <p className="text-lg mb-2">
+                      Accelerate releases and reduce manual effort with robust, maintainable test automation.
+                    </p>
+                  </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <h4 className="font-bold mb-2">Scalable Test Suites</h4>
-                  <p className="text-gray-600">
-                    Our automation solutions scale with your product, with optimized execution time,
-                    parallel processing, and clean code practices.
-                  </p>
+                <div className="border-t pt-6">
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className="h-8 w-8 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Box className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">Frameworks & Tools</h4>
+                      <p className="text-gray-600">
+                        We're experts in Selenium, Cypress, Playwright, WebdriverIO and can build frameworks 
+                        from scratch or optimize your existing solutions.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className="h-8 w-8 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Layers className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">Scalable Test Suites</h4>
+                      <p className="text-gray-600">
+                        Our automation solutions scale with your product, with optimized execution time,
+                        parallel processing, and clean code practices.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className="h-8 w-8 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0">
+                      <BarChart3 className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">Reporting & Dashboards</h4>
+                      <p className="text-gray-600">
+                        Custom reporting solutions that provide actionable insights, with dashboards
+                        that give visibility to stakeholders at all levels.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="h-8 w-8 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0">
+                      <GitCompare className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">API + UI Combined Strategies</h4>
+                      <p className="text-gray-600">
+                        We build pyramids of testing that balance API and UI automation for maximum
+                        coverage with minimum execution time.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <h4 className="font-bold mb-2">Reporting & Dashboards</h4>
-                  <p className="text-gray-600">
-                    Custom reporting solutions that provide actionable insights, with dashboards
-                    that give visibility to stakeholders at all levels.
-                  </p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <h4 className="font-bold mb-2">API + UI Combined Strategies</h4>
-                  <p className="text-gray-600">
-                    We build pyramids of testing that balance API and UI automation for maximum
-                    coverage with minimum execution time.
-                  </p>
-                </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
             
             {/* Salesforce Testing */}
             <div className="mb-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
