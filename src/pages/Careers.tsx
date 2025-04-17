@@ -32,7 +32,7 @@ const CareersPage = () => {
           <div className="max-w-6xl mx-auto">
             <SectionTitle
               title="Why Work With Us"
-              subtitle="At BugSquashers, we're building a different kind of QA culture."
+              subtitle="At Fly High, we're building a different kind of QA culture."
               align="center"
             />
             

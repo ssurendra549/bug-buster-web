@@ -14,8 +14,10 @@ import { useEffect, useState } from 'react';
 
 const HeroPunchlines = [
   "We don't just test. We stop bugs before they're born.",
-  "We don't just run scripts—we build smarter ways to make software bulletproof",
-  "We test. We grow together"
+  "We don't just run scripts—we build smarter ways to make it bulletproof",
+  "Your users deserve flawless. We deliver it.",
+  "No more patching after launch. We catch it before release.",
+  "From Provar to Playwright, we speak every QA language."
 ];
 
 const HomePage = () => {
@@ -25,7 +27,7 @@ const HomePage = () => {
     // Auto-rotate through punch lines every 5 seconds
     const interval = setInterval(() => {
       setCurrentPunchlineIndex((prev) => (prev + 1) % HeroPunchlines.length);
-    }, 5000);
+    }, 3000);
     
     return () => clearInterval(interval);
   }, []);
@@ -90,97 +92,6 @@ const HomePage = () => {
             </div>
             <div className="md:w-1/2 flex justify-center items-center">
               <BugIllustration />
-            </div>
-          </div>
-        </section>
-        
-        {/* Why QA Matters */}
-        <section className="py-16 px-6 md:px-12 lg:px-20 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <SectionTitle
-              title="Why QA Matters"
-              subtitle="Quality assurance isn't just a nice-to-have—it's a business necessity."
-            />
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="mt-1">
-                    <Check className="h-6 w-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium mb-2">Detect defects early and reduce release risk</h3>
-                    <p className="text-gray-600">Finding bugs early in the development cycle saves up to 15x the cost of fixing them after release.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="mt-1">
-                    <Check className="h-6 w-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium mb-2">Boost customer trust and brand reputation</h3>
-                    <p className="text-gray-600">88% of users are less likely to return to a website after a bad experience.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="mt-1">
-                    <Check className="h-6 w-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium mb-2">Save cost by preventing production failures</h3>
-                    <p className="text-gray-600">A single hour of downtime costs enterprises an average of $100,000.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="mt-1">
-                    <Check className="h-6 w-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium mb-2">Support CI/CD with stable pipelines</h3>
-                    <p className="text-gray-600">Automated testing enables 3x more frequent deployments with 24% faster recovery times.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="mt-1">
-                    <Check className="h-6 w-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium mb-2">Improve UX and accessibility compliance</h3>
-                    <p className="text-gray-600">Accessible applications reach 15% more users while avoiding potential legal issues.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white p-8 rounded-lg shadow-sm border">
-                <h3 className="text-2xl font-bold mb-6 text-center">The Cost of Poor Quality</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center pb-2 border-b">
-                    <span className="font-medium">Bug found during development</span>
-                    <span className="font-bold text-green-600">$100</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-2 border-b">
-                    <span className="font-medium">Bug found during testing</span>
-                    <span className="font-bold text-yellow-600">$500</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-2 border-b">
-                    <span className="font-medium">Bug found in production</span>
-                    <span className="font-bold text-red-600">$10,000+</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-2 border-b">
-                    <span className="font-medium">Lost customer due to bugs</span>
-                    <span className="font-bold text-red-600">Priceless</span>
-                  </div>
-                </div>
-                <div className="mt-6 p-4 bg-blue-50 rounded-md">
-                  <p className="text-blue-700 font-medium text-center">
-                    Investing in quality isn't an expense—it's a strategic advantage.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -263,7 +174,7 @@ const HomePage = () => {
               />
               <ToolCard
                 name="Provar"
-                imageUrl="https://www.provartesting.com/wp-content/uploads/2022/12/New-Provar-Logo-Vertical.png"
+                imageUrl="https://provar.com/wp-content/uploads/elementor/thumbs/Provar_navy_new-tag-qfdhvey067hofe37atl5qbj018nqzl2qzcwky11pao.png"
               />
               <ToolCard
                 name="Jenkins"
@@ -338,6 +249,61 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+
+        {/*QA Value Section - Tile Style*/}
+<section className="py-20 px-6 md:px-12 lg:px-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+    
+    {/* Tile: Why QA Matters */}
+    <div className="bg-white p-8 rounded-xl shadow-md border border-gray-200 h-full flex flex-col transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:border-blue-500">
+      <h2 className="text-2xl font-bold mb-6 text-center">Why QA Matters</h2>
+      <div className="space-y-5 flex-grow">
+        {[
+          "Catch bugs early, reduce risk",
+          "Boost user trust",
+          "Prevent outages",
+          "Enable fast releases",
+          "Ensure accessibility",
+        ].map((point, index) => (
+          <div key={index} className="flex items-start space-x-3">
+            <Check className="h-5 w-5 text-blue-600 mt-1" />
+            <p className="text-gray-700">{point}</p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-6 bg-green-50 p-3 rounded text-center">
+        <p className="text-green-700 font-medium text-sm">
+          QA accelerates delivery, protects your brand & delights users.
+        </p>
+      </div>
+    </div>
+
+    {/* Tile: Cost of Poor Quality */}
+    <div className="bg-white p-8 rounded-xl shadow-md border border-gray-200 h-full flex flex-col transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:border-red-500">
+      <h2 className="text-2xl font-bold mb-6 text-center">Cost of Poor Quality</h2>
+      <div className="space-y-5 flex-grow">
+        {[
+          { label: "Bug in development", cost: "$100", color: "text-green-600" },
+          { label: "Bug in QA", cost: "$500", color: "text-yellow-500" },
+          { label: "Bug in production", cost: "$10,000+", color: "text-red-600" },
+          { label: "Lost customer", cost: "Priceless", color: "text-red-600" },
+        ].map(({ label, cost, color }, index) => (
+          <div key={index} className="flex justify-between items-center border-b pb-2">
+            <span className="text-gray-700">{label}</span>
+            <span className={`font-semibold ${color}`}>{cost}</span>
+          </div>
+        ))}
+      </div>
+      <div className="mt-6 bg-blue-50 p-3 rounded text-center">
+        <p className="text-blue-700 font-medium text-sm">
+          Quality saves time, money & reputation.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
         
         {/* Client Testimonials */}
         <section className="py-16 px-6 md:px-12 lg:px-20 bg-gray-50">
@@ -356,13 +322,13 @@ const HomePage = () => {
                 company="TechStart Inc."
               />
               <TestimonialCard
-                content="We struggled with flaky tests for months before BugSquashers came in. They rebuilt our automation framework and cut our release cycle time in half."
+                content="We struggled with flaky tests for months before Flyhigh came in. They rebuilt our automation framework and cut our release cycle time in half."
                 author="Michael Chen"
                 position="VP of Engineering"
                 company="Data Solutions"
               />
               <TestimonialCard
-                content="The Salesforce testing expertise from BugSquashers is unmatched. They automated tests we thought were impossible to automate."
+                content="The Salesforce testing expertise from Flyhigh is unmatched. They automated tests we thought were impossible to automate."
                 author="Priya Patel"
                 position="Salesforce Admin"
                 company="CloudTech Solutions"
@@ -372,7 +338,9 @@ const HomePage = () => {
         </section>
         
         {/* Final CTA */}
-        <section className="py-16 px-6 md:px-12 lg:px-20 bg-primary text-white">
+        {/* <section className="py-16 px-6 md:px-12 lg:px-20 bg-primary text-white"> */}
+        <section className="py-12 px-6 md:py-16 md:px-12 lg:px-20 bg-blue-50">
+
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to release with confidence?
@@ -389,10 +357,10 @@ const HomePage = () => {
               </PrimaryCta>
               <SecondaryCta 
                 asChild
-                className="border-white text-white hover:bg-white/10"
+                className="bg-white text-primary hover:bg-gray-100"
               >
                 <Link to="/contact">Talk to QA Expert</Link>
-              </SecondaryCta>
+              </SecondaryCta >
             </div>
           </div>
         </section>

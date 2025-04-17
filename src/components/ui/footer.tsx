@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="bg-gray-900 text-white py-12 px-6 md:px-12 lg:px-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-4">BugSquashers</h3>
+          <h3 className="text-xl font-bold mb-4">Fly High Technologies</h3>
           <p className="text-gray-300 mb-4">
             We don't just find bugs—we prevent them. We don't just run scripts—we build smarter ways to make software bulletproof.
           </p>
@@ -41,12 +41,13 @@ export function Footer() {
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
               <MapPin className="h-5 w-5 text-gray-400 mt-0.5" />
-              <span className="text-gray-300">Mallampet, Hyderabad, India</span>
+              <span className="text-gray-300">3rd Floor, 86-90 Paul Street,<br>
+              </br> London, UK EC2A 4NE</span>
             </div>
             <div className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-gray-400" />
-              <a href="mailto:hello@bugsquashers.com" className="text-gray-300 hover:text-white transition-colors">
-                hello@bugsquashers.com
+              <a href="mailto:hello@flyhighqa.com" className="text-gray-300 hover:text-white transition-colors">
+                hello@flyhighqa.com
               </a>
             </div>
             <div className="flex items-center space-x-3">
@@ -60,7 +61,7 @@ export function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto border-t border-gray-800 mt-10 pt-6 text-center text-gray-400">
-        <p>&copy; {new Date().getFullYear()} BugSquashers. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Fly high technologies limited. All rights reserved.</p>
       </div>
     </footer>
   );

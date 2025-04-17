@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
 
@@ -17,7 +16,7 @@ export function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div className={cn(
-      "p-6 border rounded-lg hover:shadow-md transition-shadow duration-300 bg-white",
+      "p-6 border border-gray-200 rounded-xl bg-white shadow-sm transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:border-blue-500",
       className
     )}>
       <div className="h-12 w-12 bg-primary/10 flex items-center justify-center rounded-lg mb-4">

@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 
 interface ToolCardProps {
@@ -14,7 +13,7 @@ export function ToolCard({
 }: ToolCardProps) {
   return (
     <div className={cn(
-      "p-4 border rounded-lg flex flex-col items-center justify-center hover:shadow-md transition-shadow duration-300 bg-white",
+      "p-4 rounded-lg bg-slate-50 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md",
       className
     )}>
       <img 
@@ -22,7 +21,7 @@ export function ToolCard({
         alt={name} 
         className="h-16 w-16 object-contain mb-3" 
       />
-      <p className="text-center font-medium">{name}</p>
+      <p className="text-center font-medium text-gray-700">{name}</p>
     </div>
   );
 }
