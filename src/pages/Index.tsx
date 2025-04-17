@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Check, Zap, Database, Monitor, Smartphone, Server } from 'lucide-react';
+import { Check, Zap, Database, Monitor, Smartphone, Server, Shield, Brain,CheckCircleIcon,CogIcon,CloudIcon,GlobeIcon,ClipboardListIcon} from 'lucide-react';
 import { BugIllustration } from '@/components/bug-illustration';
 import { Navbar } from '@/components/ui/navbar';
 import { Footer } from '@/components/ui/footer';
@@ -107,14 +107,19 @@ const HomePage = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <ServiceCard
+                title="Functional Testing"
+                description="Manual exploratory testing, smoke and regression testing by QA experts."
+                icon={CheckCircleIcon}
+              />
+              <ServiceCard
                 title="Automation Testing"
                 description="Accelerate releases with scalable test suites using Selenium, Cypress, Playwright and more."
-                icon={Zap}
+                icon={CogIcon}
               />
               <ServiceCard
                 title="Salesforce Testing"
                 description="Specialized automation for complex Salesforce apps with Provar expertise."
-                icon={Server}
+                icon={CloudIcon}
               />
               <ServiceCard
                 title="Mobile & Web QA"
@@ -124,7 +129,7 @@ const HomePage = () => {
               <ServiceCard
                 title="CI/CD & DevOps QA"
                 description="Integrate testing into your pipelines with Jenkins, GitHub Actions, and more."
-                icon={Database}
+                icon={ClipboardListIcon}
               />
               <ServiceCard
                 title="Cross-Browser Testing"
@@ -132,9 +137,19 @@ const HomePage = () => {
                 icon={Monitor}
               />
               <ServiceCard
-                title="Functional Testing"
-                description="Manual exploratory testing, smoke and regression testing by QA experts."
-                icon={Check}
+                title="Performance Testing"
+                description="Identify bottlenecks and optimize your application for speed and scalability."
+                icon={Zap}
+              />
+              <ServiceCard
+                title="Security Testing"
+                description="Protect your application from vulnerabilities with comprehensive security assessments."
+                icon={Shield}
+              />
+              <ServiceCard
+                title="AI/ML Testing"
+                description="Validate AI/ML models for accuracy, bias, and performance with specialized testing."
+                icon={Brain}
               />
             </div>
             
