@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Check, Zap, Database, Monitor, Smartphone, Server } from 'lucide-react';
+import { Check, Zap, Database, Monitor, Smartphone, Server, ChevronLeft, ChevronRight } from 'lucide-react';
 import { BugIllustration } from '@/components/bug-illustration';
 import { Navbar } from '@/components/ui/navbar';
 import { Footer } from '@/components/ui/footer';
@@ -9,8 +9,27 @@ import { ServiceCard } from '@/components/ui/service-card';
 import { TestimonialCard } from '@/components/ui/testimonial-card';
 import { PrimaryCta, SecondaryCta } from '@/components/ui/cta-button';
 import { ToolCard } from '@/components/ui/tool-card';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { useEffect, useState } from 'react';
+
+const HeroPunchlines = [
+  "We don't just test. We stop bugs before they're born.",
+  "We don't just run scripts—we build smarter ways to make software bulletproof",
+  "We test. We grow together"
+];
 
 const HomePage = () => {
+  const [currentPunchlineIndex, setCurrentPunchlineIndex] = useState(0);
+  
+  useEffect(() => {
+    // Auto-rotate through punch lines every 5 seconds
+    const interval = setInterval(() => {
+      setCurrentPunchlineIndex((prev) => (prev + 1) % HeroPunchlines.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -19,30 +38,64 @@ const HomePage = () => {
         {/* Hero Section */}
         <section className="py-12 px-6 md:py-16 md:px-12 lg:px-20 bg-blue-50">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="md:w-1/2 space-y-4">
-    
-              <h2 className="text-2xl md:text-2xl font-bold text-blue-900">
-              Tired of bugs ruining your product releases?
+            <div className="md:w-1/2 space-y-3">
+              <h2 className="text-xl md:text-xl font-bold text-blue-900">
+                Tired of bugs ruining your product releases?
               </h2>
+              
+              {/* Carousel for punch lines */}
+              <div className="h-24">
+                <Carousel
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  className="w-full"
+                  value={currentPunchlineIndex}
+                  onValueChange={(value) => setCurrentPunchlineIndex(value)}
+                >
+                  <CarouselContent>
+                    {HeroPunchlines.map((line, index) => (
+                      <CarouselItem key={index} className="pl-0">
+                        <div className="p-1">
+                          <h2 className="text-xl md:text-2xl font-bold text-blue-900">{line}</h2>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="flex justify-start gap-2 mt-4">
+                    <CarouselPrevious 
+                      className="static transform-none translate-y-0 translate-x-0 h-7 w-7" 
+                      variant="outline"
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                    </CarouselPrevious>
+                    <CarouselNext 
+                      className="static transform-none translate-y-0 translate-x-0 h-7 w-7"
+                      variant="outline"
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                    </CarouselNext>
+                  </div>
+                </Carousel>
+              </div>
+              
               <p className="text-sm md:text-base text-gray-700">
-              We're the QA experts who make sure bugs don't even get a chance to live.
+                We're the QA experts who make sure bugs don't even get a chance to live.
               </p>
-              <h1 className="text-2xl md:text-2xl font-bold text-blue-900">
-              Squashing Bugs Since Day One.
-              </h1>
               <p className="text-sm md:text-base text-gray-700">
-              Test smart. Release fearless.
+                Test smart. Release fearless.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <PrimaryCta 
                   asChild 
-                  className="bg-black hover:bg-gray-800 text-white text-sm py-3 px-4 h-auto"
+                  className="bg-black hover:bg-gray-800 text-white text-sm py-2 px-3 h-auto"
                 >
                   <Link to="/contact">Talk to Our QA Squad</Link>
                 </PrimaryCta>
                 <SecondaryCta 
                   asChild 
-                  className="border-black text-black hover:bg-gray-100 text-sm py-3 px-4 h-auto"
+                  className="border-black text-black hover:bg-gray-100 text-sm py-2 px-3 h-auto"
                 >
                   <Link to="/services">Get a Free Bug Audit</Link>
                 </SecondaryCta>
