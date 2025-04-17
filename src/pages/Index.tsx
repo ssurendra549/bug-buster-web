@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Check, Zap, Database, Monitor, Smartphone, Server } from 'lucide-react';
 import { BugIllustration } from '@/components/bug-illustration';
@@ -50,7 +51,7 @@ const HomePage = () => {
               </p>
               
               {/* Carousel for punch lines - moved below the text */}
-              <div className="h-20 mt-2 pl-4">
+              <div className="h-20 mt-2">
                 <Carousel
                   opts={{
                     align: "start",
@@ -60,11 +61,11 @@ const HomePage = () => {
                   value={currentPunchlineIndex}
                   onValueChange={(value) => setCurrentPunchlineIndex(value)}
                 >
-                  <CarouselContent>
+                  <CarouselContent className="ml-0">
                     {HeroPunchlines.map((line, index) => (
-                      <CarouselItem key={index} className="pl-0">
+                      <CarouselItem key={index} className="pl-0 text-sm md:text-base">
                         <div className="p-1">
-                          <h2 className="text-lg md:text-xl font-bold text-blue-900">{line}</h2>
+                          <h2 className="text-base md:text-lg font-bold text-blue-900">{line}</h2>
                         </div>
                       </CarouselItem>
                     ))}
