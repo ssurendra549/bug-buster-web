@@ -1,6 +1,5 @@
-
 import { Link } from 'react-router-dom';
-import { Check, Zap, Database, Monitor, Smartphone, Server, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Check, Zap, Database, Monitor, Smartphone, Server } from 'lucide-react';
 import { BugIllustration } from '@/components/bug-illustration';
 import { Navbar } from '@/components/ui/navbar';
 import { Footer } from '@/components/ui/footer';
@@ -9,7 +8,7 @@ import { ServiceCard } from '@/components/ui/service-card';
 import { TestimonialCard } from '@/components/ui/testimonial-card';
 import { PrimaryCta, SecondaryCta } from '@/components/ui/cta-button';
 import { ToolCard } from '@/components/ui/tool-card';
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { useEffect, useState } from 'react';
 
 const HeroPunchlines = [
@@ -51,7 +50,7 @@ const HomePage = () => {
               </p>
               
               {/* Carousel for punch lines - moved below the text */}
-              <div className="h-20 mt-2">
+              <div className="h-20 mt-2 pl-4">
                 <Carousel
                   opts={{
                     align: "start",
@@ -70,20 +69,6 @@ const HomePage = () => {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <div className="flex justify-start gap-2 mt-2">
-                    <CarouselPrevious 
-                      className="static transform-none translate-y-0 translate-x-0 h-6 w-6" 
-                      variant="outline"
-                    >
-                      <ChevronLeft className="h-3 w-3" />
-                    </CarouselPrevious>
-                    <CarouselNext 
-                      className="static transform-none translate-y-0 translate-x-0 h-6 w-6"
-                      variant="outline"
-                    >
-                      <ChevronRight className="h-3 w-3" />
-                    </CarouselNext>
-                  </div>
                 </Carousel>
               </div>
               
