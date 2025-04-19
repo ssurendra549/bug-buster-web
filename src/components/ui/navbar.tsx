@@ -13,12 +13,12 @@ export function Navbar() {
   };
 
   return (
-    <nav className="py-4 px-6 md:px-12 lg:px-20 sticky top-0 bg-white shadow-sm z-50">
+    <nav className="py-4 px-6 md:px-12 lg:px-20 sticky top-0 bg-blue-50 z-50">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/logo.png" 
+              src="/image-uploads/logo.png" 
               alt="FLY HIGH TECHNOLOGIES Logo" 
               className="h-24 md:h-30"
             />

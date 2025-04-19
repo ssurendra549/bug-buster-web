@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
-import { Check, Zap, Database, Monitor, Smartphone, Server, Shield, Brain,CheckCircleIcon,CogIcon,CloudIcon,GlobeIcon,ClipboardListIcon} from 'lucide-react';
-import { BugIllustration } from '@/components/bug-illustration';
+import { Check, Zap, Database, Monitor, Smartphone, Users, Shield, Brain,CheckCircleIcon,CogIcon,CloudIcon,ClipboardListIcon,Accessibility} from 'lucide-react';
+import { HeroImage } from '@/components/hero-image';
 import { Navbar } from '@/components/ui/navbar';
 import { Footer } from '@/components/ui/footer';
 import { SectionTitle } from '@/components/ui/section-title';
@@ -11,6 +11,7 @@ import { PrimaryCta, SecondaryCta } from '@/components/ui/cta-button';
 import { ToolCard } from '@/components/ui/tool-card';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { useEffect, useState } from 'react';
+import { access } from 'fs';
 
 const HeroPunchlines = [
   "We don't just test. We stop bugs before they're born.",
@@ -38,8 +39,8 @@ const HomePage = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-12 px-6 md:py-16 md:px-12 lg:px-20 bg-blue-50">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <section className="h-screen py-12 px-6 md:py-16 md:px-12 lg:px-20 bg-blue-50">     
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="md:w-1/2 space-y-3">
               <h2 className="text-xl md:text-xl font-bold text-blue-900">
                 Tired of bugs ruining your product releases?
@@ -49,7 +50,7 @@ const HomePage = () => {
                 We're the QA experts who make sure bugs don't even get a chance to live.
               </p>
               <p className="text-sm md:text-base text-gray-700">
-                Test smart. Release fearless.
+                We kill bugs before they’re born.
               </p>
               
               {/* Carousel for punch lines - moved below the text */}
@@ -91,21 +92,21 @@ const HomePage = () => {
               </div>
             </div>
             <div className="md:w-1/2 flex justify-center items-center">
-              <BugIllustration />
+              <HeroImage />
             </div>
           </div>
         </section>
         
         {/* Our Services */}
-        <section className="py-16 px-6 md:px-12 lg:px-20">
-          <div className="max-w-6xl mx-auto">
+        <section className="py-16 px-6 md:px-12 lg:px-28">
+          <div className="max-w-7xl mx-auto">
             <SectionTitle
               title="Our Services"
               subtitle="End-to-end QA services that actually end bugs."
               align="center"
             />
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <ServiceCard
                 title="Functional Testing"
                 description="Manual exploratory testing, smoke and regression testing by QA experts."
@@ -147,9 +148,24 @@ const HomePage = () => {
                 icon={Shield}
               />
               <ServiceCard
+                title="Database Testing"
+                description="Ensure data integrity, validate queries, and optimize database performance."
+                icon={Database}
+              />
+              <ServiceCard
+                title="Accessibility Testing"
+                description="Ensure your application is usable and inclusive for people with disabilities."
+                icon={Accessibility}
+              />
+              <ServiceCard
                 title="AI/ML Testing"
                 description="Validate AI/ML models for accuracy, bias, and performance with specialized testing."
                 icon={Brain}
+              />
+              <ServiceCard
+                title="QA Audit & Team Management"
+                description="Comprehensive QA audits to identify gaps and improve your testing strategy. Manage and empower QA teams to deliver quality at every stage."
+                icon={Users}
               />
             </div>
             
@@ -162,7 +178,7 @@ const HomePage = () => {
         </section>
         
         {/* Tools & Platforms */}
-        <section className="py-16 px-6 md:px-12 lg:px-20 bg-gray-50">
+         <section className="py-16 px-6 md:px-12 lg:px-20 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <SectionTitle
               title="Tools & Platforms"
@@ -170,7 +186,7 @@ const HomePage = () => {
               align="center"
             />
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               <ToolCard
                 name="Selenium"
                 imageUrl="https://www.selenium.dev/images/selenium_logo_square_green.png"
@@ -191,6 +207,18 @@ const HomePage = () => {
                 name="Provar"
                 imageUrl="https://provar.com/wp-content/uploads/elementor/thumbs/Provar_navy_new-tag-qfdhvey067hofe37atl5qbj018nqzl2qzcwky11pao.png"
               />
+              <ToolCard 
+                name="WebdriverIO"
+                imageUrl="https://webdriver.io/img/webdriverio.png" 
+              />
+              <ToolCard
+                name="JMeter"
+                imageUrl="https://jmeter.apache.org/images/jmeter.png"
+               />
+              <ToolCard 
+                name="k6" 
+                imageUrl="https://avatars.githubusercontent.com/u/28234837" 
+              />
               <ToolCard
                 name="Jenkins"
                 imageUrl="https://jenkins.io/images/logos/jenkins/jenkins.png"
@@ -199,13 +227,15 @@ const HomePage = () => {
                 name="BrowserStack"
                 imageUrl="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png"
               />
-              <ToolCard
-                name="GitHub Actions"
-                imageUrl="https://avatars.githubusercontent.com/u/44036562"
-              />
             </div>
+            </div>
+            <div className="flex justify-center mt-10">
+              <PrimaryCta asChild>
+                <Link to="/services">Explore All Tools</Link>
+              </PrimaryCta>
           </div>
         </section>
+       
         
         {/* Why Choose Us */}
         <section className="py-16 px-6 md:px-12 lg:px-20">
