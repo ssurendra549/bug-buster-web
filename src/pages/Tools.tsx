@@ -2,15 +2,14 @@
 import { Navbar } from '@/components/ui/navbar';
 import { Footer } from '@/components/ui/footer';
 import { SectionTitle } from '@/components/ui/section-title';
-import { ToolCard } from '@/components/ui/tool-card';
-import { Bamboo, Github, Gitlab, Bitbucket, ShieldCheck, Cucumber } from 'lucide-react';
+import { Github, Gitlab, Shield, Server } from 'lucide-react';
 
 export default function Tools() {
   const tools = [
     {
       name: "Bamboo",
       description: "Continuous integration and deployment server",
-      icon: Bamboo,
+      icon: Server,
       imageUrl: "https://seeklogo.com/images/B/bamboo-logo-8D64504634-seeklogo.com.png"
     },
     {
@@ -28,19 +27,19 @@ export default function Tools() {
     {
       name: "Bitbucket",
       description: "Git code management for teams",
-      icon: Bitbucket,
+      icon: Server,
       imageUrl: "https://wac-cdn.atlassian.com/dam/jcr:c942540c-53ae-4357-bfec-c0d9fc771e50/Bitbucket-blue.svg"
     },
     {
       name: "Security Testing Tools",
       description: "Comprehensive security testing suite",
-      icon: ShieldCheck,
+      icon: Shield,
       imageUrl: "https://cdn-icons-png.flaticon.com/512/6941/6941697.png"
     },
     {
       name: "Cucumber",
       description: "Behavior Driven Development tool",
-      icon: Cucumber,
+      icon: Server,
       imageUrl: "https://cucumber.io/img/cucumber-logo.svg"
     },
     {
