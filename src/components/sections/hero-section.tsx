@@ -25,7 +25,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="h-screen py-12 px-6 md:py-16 md:px-12 lg:px-20 bg-blue-50">     
+    <section className="min-h-screen max-h-screen py-8 px-6 md:py-12 md:px-12 lg:px-20 bg-blue-50 flex items-center">     
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="md:w-1/2 space-y-3">
           <h2 className="text-xl md:text-xl font-bold text-blue-900">
