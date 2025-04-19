@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Check, Zap, Database, Monitor, Smartphone, Users, Shield, Brain,CheckCircleIcon,CogIcon,CloudIcon,ClipboardListIcon,Accessibility} from 'lucide-react';
 import { HeroImage } from '@/components/hero-image';
@@ -178,7 +177,7 @@ const HomePage = () => {
         </section>
         
         {/* Tools & Platforms */}
-         <section className="py-16 px-6 md:px-12 lg:px-20 bg-gray-50">
+        <section className="py-16 px-6 md:px-12 lg:px-20 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <SectionTitle
               title="Tools & Platforms"
@@ -228,14 +227,13 @@ const HomePage = () => {
                 imageUrl="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png"
               />
             </div>
-            </div>
             <div className="flex justify-center mt-10">
               <PrimaryCta asChild>
-                <Link to="/services">Explore All Tools</Link>
+                <Link to="/tools">Explore All Tools</Link>
               </PrimaryCta>
+            </div>
           </div>
         </section>
-       
         
         {/* Why Choose Us */}
         <section className="py-16 px-6 md:px-12 lg:px-20">
@@ -383,7 +381,6 @@ const HomePage = () => {
         </section>
         
         {/* Final CTA */}
-        {/* <section className="py-16 px-6 md:px-12 lg:px-20 bg-primary text-white"> */}
         <section className="py-12 px-6 md:py-16 md:px-12 lg:px-20 bg-blue-50">
 
           <div className="max-w-3xl mx-auto text-center">
